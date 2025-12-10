@@ -37,16 +37,15 @@
     </div>
     <!-- Project Information -->
     <div class="card p-4 mb-4">
-       <!-- Condition problematic project if overdue task exist and progress below 50 (hardcoded) -->
+        <!-- Condition problematic project if overdue task exist and progress below 50 (hardcoded) -->
         @if($widgets['overdue'] > 0 || $widgets['progressBar'] < 50)
             <div class="alert alert-danger d-flex align-items-center gap-2" role="alert">
-                <i class="bi bi-exclamation-triangle-fill"></i>
-                <span>
-                    Project ini dikategorikan bermasalah karena terdapat task overdue
-                    dan progress keseluruhan masih rendah (di bawah 50%).
-                </span>
-            </div>
-        @endif
+            <i class="bi bi-exclamation-triangle-fill"></i>
+            <span>
+                This project is categorized as problematic because it contains overdue tasks and its overall progress remains low (below 50%).
+            </span>
+    </div>
+    @endif
     <div class="d-flex justify-content-between">
         <div>
             <h4 class="fw-bold mb-1">{{ $project->name }}</h4>
